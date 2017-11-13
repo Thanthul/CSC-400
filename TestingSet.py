@@ -21,7 +21,7 @@ gSales = data.Global_Sales.tolist()
 #plt.xlabel('Critic Scores')
 #plt.ylabel('Global Sales')
 #plt.show()
-
+naSales = data.NA_Sales.tolist()
 genre = data.Genre.tolist()
 numAction = genre[:3370]
 gSalesAction = gSales[:3370]
