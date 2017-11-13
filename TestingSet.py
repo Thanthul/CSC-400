@@ -25,6 +25,7 @@ naSales = data.NA_Sales.tolist()
 genre = data.Genre.tolist()
 numAction = genre[:3370]
 gSalesAction = gSales[:3370]
+naSalesAction = naSales[:3370]
 numAdventure = genre[3370:4673]
 gSalesAdventure = gSales[3370:4673]
 # numFighting = genre[4673:5522]
@@ -47,7 +48,7 @@ gSalesAdventure = gSales[3370:4673]
 # gSalesSports = gSales[13686:16034]
 # numStrategy = genre[16034:16717]
 # gSalesStrategy = gSales[16034:16717]
-plt.hist2d(numAction, gSalesAction)
+plt.hist2d(naSalesAction, gSalesAction)
 plt.show()
 
 
