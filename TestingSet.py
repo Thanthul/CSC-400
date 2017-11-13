@@ -9,13 +9,22 @@ data = pd.read_csv('GameSales2016.csv', names = ColNames, skiprows = 1)
 #{Action = 0, Adventure = 1, Fighting = 2, Misc = 3, Platform = 4, Puzzle = 5, Racing = 6, Role-Playing = 7, Shooter = 8, Simulation = 9, Sports = 10, Strategy = 11}
 
 #Calling Specific Columns
-CriticScores = data.Critic_Scores.tolist()
+#CriticScores = data.Critic_Scores.tolist()
 GlobalSales = data.Global_Sales.tolist()
 # print(GlobalSales)
-plt.scatter(CriticScores, GlobalSales, color = 'b')
-plt.xlabel('Critic Scores')
+#plt.scatter(CriticScores, GlobalSales, color = 'b') # good but confusing to look at
+#plt.xlabel('Critic Scores')
+#plt.ylabel('Global Sales')
+#plt.show()
+
+genre = data.genre.tolist()
+plt.scatter(genre, GlobalSales, color = 'r')
+plt.xlabel('Genre')
 plt.ylabel('Global Sales')
 plt.show()
+
+
+
 
 #Do Note that in the excel file that critic scores with no values were given a "0"
 #Excel File is added in the github page
