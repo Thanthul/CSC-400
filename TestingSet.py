@@ -15,29 +15,41 @@ data = pd.read_csv('GameSales2016.csv', names = ColNames, skiprows = 1)
 
 #Calling Specific Columns
 #CriticScores = data.Critic_Scores.tolist()
-GlobalSales = data.Global_Sales.tolist()
+gSales = data.Global_Sales.tolist()
 # print(GlobalSales)
 #plt.scatter(CriticScores, GlobalSales, color = 'b') # good but confusing to look at
 #plt.xlabel('Critic Scores')
 #plt.ylabel('Global Sales')
 #plt.show()
 
-genre = data.genre.tolist()
-Action = genre[:3370]
-Adventure = genre[3370:4673]
-Fighting = genre[4673:5522]
-Misc = genre[5522:7272]
-Platform = genre[7272:8160]
-Puzzle = genre[8160:8740]
-Racing = genre[8740:9989]
-Role-Playing = genre[9989:11489]
-Shooter = genre[11489:12812]
-Simulation = genre[12812:13686]
-Sports = genre[13686:16034]
-Strategy = genre[16034:16717]
-plt.scatter(genre, GlobalSales, color = 'r')
-plt.xlabel('Genre')
-plt.ylabel('Global Sales')
+genre = data.Genre.tolist()
+numAction = genre[:3370]
+gSalesAction = gSales[:3370]
+numAdventure = genre[3370:4673]
+gSalesAdventure = gSales[3370:4673]
+# numFighting = genre[4673:5522]
+# gSalesFighting = gSales[4673:5522]
+# numMisc = genre[5522:7272]
+# gSalesMisc = gSales[5522:7272]
+# numPlatform = genre[7272:8160]
+# gSalesPlatform = gSales[7272:8160]
+# numPuzzle = genre[8160:8740]
+# gSalesPuzzle = gSales[8160:8740]
+# numRacing = genre[8740:9989]
+# gSalesRacing = gSales[8740:9989]
+# numRole-Playing = genre[9989:11489]
+# gSalesRole-Playing = gSales[9989:11489]
+# numShooter = genre[11489:12812]
+# gSalesShooter = gSales[11489:12812]
+# numSimulation = genre[12812:13686]
+# gSalesSimulation = gSales[12812:13686]
+# numSports = genre[13686:16034]
+# gSalesSports = gSales[13686:16034]
+# numStrategy = genre[16034:16717]
+# gSalesStrategy = gSales[16034:16717]
+plt.scatter(gSalesAction, gSalesAdventure, color = 'r')
+plt.xlabel('Sales Action')
+plt.ylabel('Sales Adventure')
 plt.show()
 
 
