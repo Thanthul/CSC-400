@@ -47,12 +47,8 @@ gSalesAdventure = gSales[3370:4673]
 # gSalesSports = gSales[13686:16034]
 # numStrategy = genre[16034:16717]
 # gSalesStrategy = gSales[16034:16717]
-plt.scatter(gSalesAction, gSalesAdventure, color = 'r')
-plt.xlabel('Sales Action')
-plt.ylabel('Sales Adventure')
+plt.hist2d(numAction, gSalesAction)
 plt.show()
-
-
 
 
 #Do Note that in the excel file that critic scores with no values were given a "0"
