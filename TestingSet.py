@@ -51,7 +51,7 @@ plt.scatter(gSalesAction, gSalesAdventure, color = 'r')
 plt.xlabel('Sales Action')
 plt.ylabel('Sales Adventure')
 plt.show()
-
+#Hello
 
 
 
