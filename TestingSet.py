@@ -48,7 +48,8 @@ gSalesAdventure = gSales[3370:4673]
 # gSalesSports = gSales[13686:16034]
 # numStrategy = genre[16034:16717]
 # gSalesStrategy = gSales[16034:16717]
-plt.hist2d(naSalesAction, gSalesAction)
+plt.scatter(numAction, gSalesAction)
+plt.scatter(numAdventure, gSalesAdventure)
 plt.show()
 
 
