@@ -23,31 +23,44 @@ gSales = data.Global_Sales.tolist()
 #plt.show()
 naSales = data.NA_Sales.tolist()
 genre = data.Genre.tolist()
+
 numAction = genre[:3370]
 gSalesAction = gSales[:3370]
 naSalesAction = naSales[:3370]
+
 numAdventure = genre[3370:4673]
 gSalesAdventure = gSales[3370:4673]
+
 numFighting = genre[4673:5522]
 gSalesFighting = gSales[4673:5522]
+
 numMisc = genre[5522:7272]
 gSalesMisc = gSales[5522:7272]
+
 numPlatform = genre[7272:8160]
 gSalesPlatform = gSales[7272:8160]
+
 numPuzzle = genre[8160:8740]
 gSalesPuzzle = gSales[8160:8740]
+
 numRacing = genre[8740:9989]
 gSalesRacing = gSales[8740:9989]
+
 numRole_Playing = genre[9989:11489]
 gSalesRole_Playing = gSales[9989:11489]
+
 numShooter = genre[11489:12812]
 gSalesShooter = gSales[11489:12812]
+
 numSimulation = genre[12812:13686]
 gSalesSimulation = gSales[12812:13686]
+
 numSports = genre[13686:16034]
 gSalesSports = gSales[13686:16034]
+
 numStrategy = genre[16034:16717]
 gSalesStrategy = gSales[16034:16717]
+
 plt.bar(numAction, gSalesAction)
 plt.bar(numAdventure, gSalesAdventure)
 plt.bar(numFighting, gSalesFighting)
@@ -60,6 +73,8 @@ plt.bar(numShooter, gSalesShooter)
 plt.bar(numSimulation, gSalesSimulation)
 plt.bar(numSports, gSalesSports)
 plt.bar(numStrategy, gSalesStrategy)
+plt.xlabel('Genres')
+plt.ylabel('Global Sales in Millions')
 plt.show()
 
 
