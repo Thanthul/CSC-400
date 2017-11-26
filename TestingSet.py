@@ -32,81 +32,79 @@ euSalesAction = euSales[:3370]
 
 numAdventure = genre[3370:4673]
 gSalesAdventure = gSales[3370:4673]
-euSalesAdventure = euSales[3370:4673]
+naSalesAdventure = naSales[3370:4673]
 
 numFighting = genre[4673:5522]
 gSalesFighting = gSales[4673:5522]
-euSalesFighting = euSales[4673:5522]
+naSalesFighting = naSales[4673:5522]
 
 numMisc = genre[5522:7272]
 gSalesMisc = gSales[5522:7272]
-euSalesMisc = euSales[5522:7272]
+naSalesMisc = naSales[5522:7272]
 
 numPlatform = genre[7272:8160]
 gSalesPlatform = gSales[7272:8160]
-euSalesPlatform = euSales[7272:8160]
+naSalesPlatform = naSales[7272:8160]
 
 numPuzzle = genre[8160:8740]
 gSalesPuzzle = gSales[8160:8740]
-euSalesPuzzle = euSales[8160:8740]
+naSalesPuzzle = naSales[8160:8740]
 
 numRacing = genre[8740:9989]
 gSalesRacing = gSales[8740:9989]
-euSalesRacing = euSales[8740:9989]
+naSalesRacing = naSales[8740:9989]
 
 numRole_Playing = genre[9989:11489]
 gSalesRole_Playing = gSales[9989:11489]
-euSalesRole_Playing = euSales[9989:11489]
+naSalesRole_Playing = naSales[9989:11489]
 
 numShooter = genre[11489:12812]
 gSalesShooter = gSales[11489:12812]
-euSalesShooter = euSales[11489:12812]
+naSalesShooter = naSales[11489:12812]
 
 numSimulation = genre[12812:13686]
 gSalesSimulation = gSales[12812:13686]
-euSalesSimulation = euSales[12812:13686]
+naSalesSimulation = naSales[12812:13686]
 
 numSports = genre[13686:16034]
 gSalesSports = gSales[13686:16034]
-euSalesSports = euSales[13686:16034]
+naSalesSports = naSales[13686:16034]
 
 numStrategy = genre[16034:16717]
 gSalesStrategy = gSales[16034:16717]
-euSalesStrategy = euSales[16034:16717]
+naSalesStrategy = naSales[16034:16717]
 
-plt.bar(numAction, gSalesAction)
-plt.bar(numAdventure, gSalesAdventure)
-plt.bar(numFighting, gSalesFighting)
-plt.bar(numMisc, gSalesMisc)
-plt.bar(numPlatform, gSalesPlatform)
-plt.bar(numPuzzle, gSalesPuzzle)
-plt.bar(numRacing, gSalesRacing)
-plt.bar(numRole_Playing, gSalesRole_Playing)
-plt.bar(numShooter, gSalesShooter)
-plt.bar(numSimulation, gSalesSimulation)
-plt.bar(numSports, gSalesSports)
-plt.bar(numStrategy, gSalesStrategy)
+# plt.bar(numAction, gSalesAction)
+# plt.bar(numAdventure, gSalesAdventure)
+# plt.bar(numFighting, gSalesFighting)
+# plt.bar(numMisc, gSalesMisc)
+# plt.bar(numPlatform, gSalesPlatform)
+# plt.bar(numPuzzle, gSalesPuzzle)
+# plt.bar(numRacing, gSalesRacing)
+# plt.bar(numRole_Playing, gSalesRole_Playing)
+# plt.bar(numShooter, gSalesShooter)
+# plt.bar(numSimulation, gSalesSimulation)
+# plt.bar(numSports, gSalesSports)
+# plt.bar(numStrategy, gSalesStrategy)
+# plt.xlabel('Genres')
+# plt.ylabel('Global Sales in Millions')
+# plt.show()
+
+
+plt.bar(numAction, naSalesAction)
+plt.bar(numAdventure, naSalesAdventure)
+plt.bar(numFighting, naSalesFighting)
+plt.bar(numMisc, naSalesMisc)
+plt.bar(numPlatform, naSalesPlatform)
+plt.bar(numPuzzle, naSalesPuzzle)
+plt.bar(numRacing, naSalesRacing)
+plt.bar(numRole_Playing, naSalesRole_Playing)
+plt.bar(numShooter, naSalesShooter)
+plt.bar(numSimulation, naSalesSimulation)
+plt.bar(numSports, naSalesSports)
+plt.bar(numStrategy, naSalesStrategy)
 plt.xlabel('Genres')
-plt.ylabel('Global Sales in Millions')
-plt.title('Global Sales')
+plt.ylabel('North American Sales in Millions')
 plt.show()
-
-plt.bar(numAction, euSalesAction)
-plt.bar(numAdventure, euSalesAdventure)
-plt.bar(numFighting, euSalesFighting)
-plt.bar(numMisc, euSalesMisc)
-plt.bar(numPlatform, euSalesPlatform)
-plt.bar(numPuzzle, euSalesPuzzle)
-plt.bar(numRacing, euSalesRacing)
-plt.bar(numRole_Playing, euSalesRole_Playing)
-plt.bar(numShooter, euSalesShooter)
-plt.bar(numSimulation, euSalesSimulation)
-plt.bar(numSports, euSalesSports)
-plt.bar(numStrategy, euSalesStrategy)
-plt.xlabel('Genres')
-plt.ylabel('European Sales in Millions')
-plt.title('European Sales')
-plt.show()
-
 #Do Note that in the excel file that critic scores with no values were given a "0"
 #Excel File is added in the github page
