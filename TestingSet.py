@@ -17,49 +17,62 @@ data = pd.read_csv('GameSales2016.csv', names = ColNames, skiprows = 1)
 #CriticScores = data.Critic_Scores.tolist()
 gSales = data.Global_Sales.tolist()
 # print(GlobalSales)
-#plt.scatter(CriticScores, GlobalSales, color = 'b') # good but confusing to look at
-#plt.xlabel('Critic Scores')
-#plt.ylabel('Global Sales')
-#plt.show()
+# plt.scatter(CriticScores, GlobalSales, color = 'b') # good but confusing to look at
+# plt.xlabel('Critic Scores')
+# plt.ylabel('Global Sales')
+# plt.show()
 naSales = data.NA_Sales.tolist()
+euSales = data.EU_Sales.tolist()
 genre = data.Genre.tolist()
 
 numAction = genre[:3370]
 gSalesAction = gSales[:3370]
 naSalesAction = naSales[:3370]
+euSalesAction = euSales[:3370]
 
 numAdventure = genre[3370:4673]
 gSalesAdventure = gSales[3370:4673]
+euSalesAdventure = euSales[3370:4673]
 
 numFighting = genre[4673:5522]
 gSalesFighting = gSales[4673:5522]
+euSalesFighting = euSales[4673:5522]
 
 numMisc = genre[5522:7272]
 gSalesMisc = gSales[5522:7272]
+euSalesMisc = euSales[5522:7272]
 
 numPlatform = genre[7272:8160]
 gSalesPlatform = gSales[7272:8160]
+euSalesPlatform = euSales[7272:8160]
 
 numPuzzle = genre[8160:8740]
 gSalesPuzzle = gSales[8160:8740]
+euSalesPuzzle = euSales[8160:8740]
 
 numRacing = genre[8740:9989]
 gSalesRacing = gSales[8740:9989]
+euSalesRacing = euSales[8740:9989]
 
 numRole_Playing = genre[9989:11489]
 gSalesRole_Playing = gSales[9989:11489]
+euSalesRole_Playing = euSales[9989:11489]
 
 numShooter = genre[11489:12812]
 gSalesShooter = gSales[11489:12812]
+euSalesShooter = euSales[11489:12812]
 
 numSimulation = genre[12812:13686]
 gSalesSimulation = gSales[12812:13686]
+euSalesSimulation = euSales[12812:13686]
 
 numSports = genre[13686:16034]
 gSalesSports = gSales[13686:16034]
+euSalesSports = euSales[13686:16034]
 
 numStrategy = genre[16034:16717]
 gSalesStrategy = gSales[16034:16717]
+euSalesStrategy = euSales[16034:16717]
 
 plt.bar(numAction, gSalesAction)
 plt.bar(numAdventure, gSalesAdventure)
@@ -75,8 +88,25 @@ plt.bar(numSports, gSalesSports)
 plt.bar(numStrategy, gSalesStrategy)
 plt.xlabel('Genres')
 plt.ylabel('Global Sales in Millions')
+plt.title('Global Sales')
 plt.show()
 
+plt.bar(numAction, euSalesAction)
+plt.bar(numAdventure, euSalesAdventure)
+plt.bar(numFighting, euSalesFighting)
+plt.bar(numMisc, euSalesMisc)
+plt.bar(numPlatform, euSalesPlatform)
+plt.bar(numPuzzle, euSalesPuzzle)
+plt.bar(numRacing, euSalesRacing)
+plt.bar(numRole_Playing, euSalesRole_Playing)
+plt.bar(numShooter, euSalesShooter)
+plt.bar(numSimulation, euSalesSimulation)
+plt.bar(numSports, euSalesSports)
+plt.bar(numStrategy, euSalesStrategy)
+plt.xlabel('Genres')
+plt.ylabel('European Sales in Millions')
+plt.title('European Sales')
+plt.show()
 
 #Do Note that in the excel file that critic scores with no values were given a "0"
 #Excel File is added in the github page
